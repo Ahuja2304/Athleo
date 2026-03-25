@@ -2,7 +2,7 @@
 
 *Last updated: 2026-03-13*
 
-This file is the repo-root operating guide for coding agents working in SparkyFitness. Use it to orient at the monorepo level, choose the correct package, and find verified commands quickly.
+This file is the repo-root operating guide for coding agents working in Athleo. Use it to orient at the monorepo level, choose the correct package, and find verified commands quickly.
 
 When a package-level guide has deeper or conflicting instructions, follow the package guide over this file.
 
@@ -15,12 +15,12 @@ When a package-level guide has deeper or conflicting instructions, follow the pa
 
 ## Repo Map
 
-- `SparkyFitnessFrontend/` - React 19 + Vite web app.
-- `SparkyFitnessServer/` - Node.js + Express 5 backend API with PostgreSQL.
-- `SparkyFitnessMobile/` - React Native 0.81 + Expo 54 mobile app.
+- `AthleoFrontend/` - React 19 + Vite web app.
+- `AthleoServer/` - Node.js + Express 5 backend API with PostgreSQL.
+- `AthleoMobile/` - React Native 0.81 + Expo 54 mobile app.
 - `shared/` - workspace package for shared TypeScript code and schemas.
-- `SparkyFitnessMCP/` - custom MCP server package.
-- `SparkyFitnessGarmin/` - Python Garmin integration service.
+- `AthleoMCP/` - custom MCP server package.
+- `AthleoGarmin/` - Python Garmin integration service.
 - `docs/` - Nuxt documentation site.
 - `docker/`, `helm/`, `.github/` - deployment, infrastructure, and CI/CD assets.
 - `db_schema_backup.sql` - reference database schema snapshot.
@@ -31,12 +31,12 @@ When a package-level guide has deeper or conflicting instructions, follow the pa
 - Start at repo root only to identify scope, inspect shared context, or coordinate cross-package changes.
 - Run app commands from the package directory you are changing.
 - If a task crosses frontend, server, and mobile boundaries, read each relevant package guide before editing.
-- `pnpm-workspace.yaml` currently includes `SparkyFitnessFrontend`, `SparkyFitnessMobile`, `SparkyFitnessServer`, and `shared`.
-- Auxiliary packages such as `SparkyFitnessMCP` and `docs` have their own manifests; inspect the local `package.json` before working there.
+- `pnpm-workspace.yaml` currently includes `AthleoFrontend`, `AthleoMobile`, `AthleoServer`, and `shared`.
+- Auxiliary packages such as `AthleoMCP` and `docs` have their own manifests; inspect the local `package.json` before working there.
 
 ## Verified Commands
 
-### Frontend (`SparkyFitnessFrontend/`)
+### Frontend (`AthleoFrontend/`)
 
 ```bash
 pnpm dev
@@ -48,7 +48,7 @@ pnpm test
 - `pnpm run validate` runs typecheck, lint, and Prettier check together.
 - Vite dev server runs on port `8080` and proxies API traffic to the backend on `3010`.
 
-### Server (`SparkyFitnessServer/`)
+### Server (`AthleoServer/`)
 
 ```bash
 pnpm start
@@ -57,10 +57,10 @@ pnpm run lint
 pnpm test
 ```
 
-- Backend default port is `3010` unless `SPARKY_FITNESS_SERVER_PORT` overrides it.
+- Backend default port is `3010` unless `ATHLEO_SERVER_PORT` overrides it.
 - The server guide uses `npm` examples, but the repo is a `pnpm` workspace and these scripts are verified in `package.json`.
 
-### Mobile (`SparkyFitnessMobile/`)
+### Mobile (`AthleoMobile/`)
 
 ```bash
 pnpm start
@@ -94,15 +94,15 @@ pnpm run test:run -- --watchman=false --runInBand
 
 - The tracked environment template lives at `docker/.env.example`.
 - Local development and many deployments copy that template to repo-root `.env`.
-- Server runtime secrets are expected in the repo-root `.env` when working from `SparkyFitnessServer/`.
-- The server can also load secrets from files via `SparkyFitnessServer/utils/secretLoader.js`.
+- Server runtime secrets are expected in the repo-root `.env` when working from `AthleoServer/`.
+- The server can also load secrets from files via `AthleoServer/utils/secretLoader.js`.
 
 ### Database and Schema Changes
 
 - `db_schema_backup.sql` is the reference schema snapshot at repo root.
-- New server migrations belong in `SparkyFitnessServer/db/migrations/`.
+- New server migrations belong in `AthleoServer/db/migrations/`.
 - Migration filenames must follow `YYYYMMDDHHMMSS_description.sql`.
-- If you add a database table, also update `SparkyFitnessServer/db/rls_policies.sql`.
+- If you add a database table, also update `AthleoServer/db/rls_policies.sql`.
 - Treat the RLS policy file as mandatory maintenance, not optional cleanup.
 
 ### Auth and Integration Patterns
@@ -114,17 +114,17 @@ pnpm run test:run -- --watchman=false --runInBand
 ## Quick Routing
 
 - Frontend bug fix from repo root:
-  move into `SparkyFitnessFrontend/`, read its package guide, then run the relevant web validation command.
+  move into `AthleoFrontend/`, read its package guide, then run the relevant web validation command.
 - Server migration or new table:
-  move into `SparkyFitnessServer/`, add the migration, and update `db/rls_policies.sql` in the same change.
+  move into `AthleoServer/`, add the migration, and update `db/rls_policies.sql` in the same change.
 - Mobile health sync debugging:
-  move into `SparkyFitnessMobile/`, read the mobile guide, then inspect sync services and health API usage before testing with Watchman-safe Jest commands.
+  move into `AthleoMobile/`, read the mobile guide, then inspect sync services and health API usage before testing with Watchman-safe Jest commands.
 
 ## Package Guides
 
-- Frontend deep guide: `SparkyFitnessFrontend/CLAUDE.md`
-- Server deep guide: `SparkyFitnessServer/CLAUDE.md`
-- Mobile deep guide: `SparkyFitnessMobile/CLAUDE.md`
+- Frontend deep guide: `AthleoFrontend/CLAUDE.md`
+- Server deep guide: `AthleoServer/CLAUDE.md`
+- Mobile deep guide: `AthleoMobile/CLAUDE.md`
 
 These package guides contain the detailed architecture and workflow rules for their directories. Use them for package-specific implementation choices, validation expectations, and subsystem conventions.
 

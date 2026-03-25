@@ -24,7 +24,7 @@ jobs:
       - run: |
           cd docs
           pnpm install --frozen-lockfile
-          NUXT_APP_BASE_URL=/SparkyFitness/ pnpm exec nuxt build --preset github_pages
+          NUXT_APP_BASE_URL=/Athleo/ pnpm exec nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

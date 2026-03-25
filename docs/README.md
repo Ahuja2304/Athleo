@@ -1,3 +1,3 @@
-# SparkyFitness Documentation
+# Athleo Documentation
 
-This is the documentation site for SparkyFitness.
+This is the documentation site for Athleo.

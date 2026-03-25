@@ -2,15 +2,15 @@ const fs = require('fs');
 const path = require('path');
 
 const targetDirs = [
-  'SparkyFitnessFrontend/src/locales',
-  'SparkyFitnessFrontend/src/components',
-  'SparkyFitnessFrontend/src/pages',
-  'SparkyFitnessFrontend/index.html',
-  'SparkyFitnessFrontend/public/manifest.json',
-  'SparkyFitnessMobile/src/components',
-  'SparkyFitnessMobile/src/screens',
-  'SparkyFitnessMobile/app.json',
-  'SparkyFitnessServer/services/emailService.js',
+  'AthleoFrontend/src/locales',
+  'AthleoFrontend/src/components',
+  'AthleoFrontend/src/pages',
+  'AthleoFrontend/index.html',
+  'AthleoFrontend/public/manifest.json',
+  'AthleoMobile/src/components',
+  'AthleoMobile/src/screens',
+  'AthleoMobile/app.json',
+  'AthleoServer/services/emailService.js',
   'docs/content',
   'README.md',
 ];
@@ -31,14 +31,14 @@ function processPath(p) {
       let content = fs.readFileSync(p, 'utf8');
       
       let newContent = content
-        .replace(/SparkyFitness/g, 'Athleo')
-        .replace(/Sparky Fitness/g, 'Athleo')
-        .replace(/sparkyfitness/g, 'athleo')
-        .replace(/sparky fitness/g, 'athleo');
+        .replace(/Athleo/g, 'Athleo')
+        .replace(/Athleo/g, 'Athleo')
+        .replace(/athleo/g, 'athleo')
+        .replace(/athleo/g, 'athleo');
       
       // Revert GitHub URLs that got mangled
-      newContent = newContent.replace(/github\.com\/CodeWithCJ\/Athleo/g, 'github.com/CodeWithCJ/SparkyFitness');
-      newContent = newContent.replace(/CodeWithCJ\/Athleo/g, 'CodeWithCJ/SparkyFitness');
+      newContent = newContent.replace(/github\.com\/CodeWithCJ\/Athleo/g, 'github.com/Ahuja2304/Athleo');
+      newContent = newContent.replace(/CodeWithCJ\/Athleo/g, 'Ahuja2304/Athleo');
 
       if (content !== newContent) {
         fs.writeFileSync(p, newContent, 'utf8');

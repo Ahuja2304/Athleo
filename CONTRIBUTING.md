@@ -1,6 +1,6 @@
-# Contributing to SparkyFitness
+# Contributing to Athleo
 
-Thank you for helping improve SparkyFitness! To keep the project organized, please follow these rules:
+Thank you for helping improve Athleo! To keep the project organized, please follow these rules:
 
 ### 1. New Features
 
@@ -13,10 +13,10 @@ Every PR must include:
 - **Tests**: Automated tests for your Frontend changes if applicable.
 - **Screenshots**: Attach "Before" vs "After" screenshots for any UI changes.
 - **Quality Checks**: You must run these before submitting:
-  - `npm run lint` and `npm run format` (specifically for `SparkyFitnessFrontend`).
-- **Translations**: If applicable, only update the English (`en`) translation file. Translations should have hardcoded fall back directly in the code Non-English translation files are maintained in a separate repository linked with Webplate. https://github.com/CodeWithCJ/SparkyFitnessTranslations
+  - `npm run lint` and `npm run format` (specifically for `AthleoFrontend`).
+- **Translations**: If applicable, only update the English (`en`) translation file. Translations should have hardcoded fall back directly in the code Non-English translation files are maintained in a separate repository linked with Webplate. https://github.com/Ahuja2304/AthleoTranslations
 - **Architecture**: Follow the existing project standards
-- **Database Security**: Any new user-specific tables must be added to Row Level Security (RLS) in `SparkyFitnessServer/db/rls_policies.sql`.
+- **Database Security**: Any new user-specific tables must be added to Row Level Security (RLS) in `AthleoServer/db/rls_policies.sql`.
 - **Code Integrity**: You certify that your contribution contains no malicious code (phishing, malware, etc.)
 - **License**: By submitting, you agree to the [License terms](LICENSE).
 

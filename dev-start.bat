@@ -1,5 +1,5 @@
 @echo off
-echo Starting SparkyFitness Development Environment...
+echo Starting Athleo Development Environment...
 docker compose --env-file .env -f docker/docker-compose.dev.yml up --build -d
 echo.
 echo Frontend: http://localhost:3004

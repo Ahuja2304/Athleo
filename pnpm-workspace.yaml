@@ -1,9 +1,9 @@
 packages:
   - "frontend"
-  - "SparkyFitnessFrontend"
+  - "AthleoFrontend"
   - "shared"
-  - "SparkyFitnessMobile"
-  - "SparkyFitnessServer"
+  - "AthleoMobile"
+  - "AthleoServer"
   - "docs"
 
 packageExtensions:

@@ -21,7 +21,7 @@ jobs:
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1
         with:
-          path: SparkyFitnessServer
+          path: AthleoServer
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
@@ -44,7 +44,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            codewithcj/sparkyfitness
+            codewithcj/athleo
             ghcr.io/${{ github.repository }}-frontend
           tags: |
             type=raw,value=v${{ steps.package-version.outputs.current-version }}
@@ -74,7 +74,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            codewithcj/sparkyfitness_server
+            codewithcj/athleo_server
             ghcr.io/${{ github.repository }}-server
           tags: |
             type=raw,value=v${{ steps.package-version.outputs.current-version }}
@@ -104,7 +104,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            codewithcj/sparkyfitness_garmin
+            codewithcj/athleo_garmin
             ghcr.io/${{ github.repository }}-garmin
           tags: |
             type=raw,value=v${{ steps.package-version.outputs.current-version }}
@@ -113,7 +113,7 @@ jobs:
         id: push-garmin
         uses: docker/build-push-action@v6
         with:
-          context: SparkyFitnessGarmin
+          context: AthleoGarmin
           file: docker/Dockerfile.garmin_microservice
           push: true
           tags: ${{ steps.meta-garmin.outputs.tags }}

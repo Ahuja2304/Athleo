@@ -90,8 +90,8 @@ Get a Athleo server running in minutes using Docker Compose.
 mkdir athleo && cd athleo
 
 # 2. Download Docker files only
-curl -L -o docker-compose.yml https://github.com/CodeWithCJ/SparkyFitness/releases/latest/download/docker-compose.prod.yml
-curl -L -o .env https://github.com/CodeWithCJ/SparkyFitness/releases/latest/download/default.env.example
+curl -L -o docker-compose.yml https://github.com/Ahuja2304/Athleo/releases/latest/download/docker-compose.prod.yml
+curl -L -o .env https://github.com/Ahuja2304/Athleo/releases/latest/download/default.env.example
 
 # 3. (Optional) Edit .env to customize database credentials, ports, etc.
 
@@ -118,7 +118,7 @@ For full installation guides, configuration options, and development docs, pleas
 - **[Installation Guide](https://codewithcj.github.io/Athleo/install/docker-compose)** - Deployment and configurations
 - **[Features Overview](https://codewithcj.github.io/Athleo/features)** - Complete feature documentation
 - **[Development Workflow](https://codewithcj.github.io/Athleo/developer/getting-started)** - Developer guide and contribution process
-- **[iOS App Info](https://github.com/CodeWithCJ/SparkyFitness/wiki/Apple-Health-Integration)** and **[Android App Info](https://github.com/CodeWithCJ/SparkyFitness/wiki/Android-Mobile-App)**
+- **[iOS App Info](https://github.com/Ahuja2304/Athleo/wiki/Apple-Health-Integration)** and **[Android App Info](https://github.com/Ahuja2304/Athleo/wiki/Android-Mobile-App)**
 
 ### Need Help?
 
@@ -127,11 +127,11 @@ For full installation guides, configuration options, and development docs, pleas
 
 ## Star History
 
-<a href="https://star-history.com/#CodeWithCJ/SparkyFitness&Date">
+<a href="https://star-history.com/#Ahuja2304/Athleo&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=CodeWithCJ/SparkyFitness&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=CodeWithCJ/SparkyFitness&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=CodeWithCJ/SparkyFitness&type=Date" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Ahuja2304/Athleo&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Ahuja2304/Athleo&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Ahuja2304/Athleo&type=Date" width="100%" />
   </picture>
 </a>
 
@@ -149,8 +149,8 @@ For full installation guides, configuration options, and development docs, pleas
 
 ## Contributors
 
-<a href="https://github.com/CodeWithCJ/SparkyFitness/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=CodeWithCJ/SparkyFitness" width="100%"/>
+<a href="https://github.com/Ahuja2304/Athleo/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Ahuja2304/Athleo" width="100%"/>
 </a>
 
 ## ⚠️ Known Issues / Beta Features ⚠️

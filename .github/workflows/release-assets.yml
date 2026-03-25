@@ -37,11 +37,11 @@ jobs:
 
       # ---------- FRONTEND ----------
       - name: Build frontend
-        run: pnpm --filter sparkyfitnessfrontend run build
+        run: pnpm --filter athleofrontend run build
 
       # ---------- BACKEND ----------
       - name: Build backend
-        run: pnpm --filter sparkyfitnessserver deploy --prod --legacy ./deploy
+        run: pnpm --filter athleoserver deploy --prod --legacy ./deploy
 
       # ---------- PACKAGE ----------
       - name: Prepare release folder
@@ -49,12 +49,12 @@ jobs:
           mkdir -p release/frontend
           mkdir -p release/backend
           
-          cp -r SparkyFitnessFrontend/dist/* release/frontend/
+          cp -r AthleoFrontend/dist/* release/frontend/
           cp -r deploy/* release/backend/
 
       # ---------- COMPRESS ----------
       - name: Compress release
-        run: tar -czvf SparkyFitness.tar.gz release/
+        run: tar -czvf Athleo.tar.gz release/
 
       - name: Upload Release Assets
         uses: softprops/action-gh-release@v2
@@ -63,6 +63,6 @@ jobs:
           files: |
             docker/docker-compose.prod.yml
             docker/.env.example
-            SparkyFitness.tar.gz
+            Athleo.tar.gz
 
         

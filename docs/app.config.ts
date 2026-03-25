@@ -1,9 +1,9 @@
 export default defineAppConfig({
   docus: {
-    title: 'SparkyFitness Docs',
-    description: 'Docs and guides around SparkyFitness',
+    title: 'Athleo Docs',
+    description: 'Docs and guides around Athleo',
     socials: {
-      github: 'CodeWithCJ/SparkyFitness',
+      github: 'Ahuja2304/Athleo',
     },
     aside: {
       level: 0,
@@ -22,7 +22,7 @@ export default defineAppConfig({
     },
     // Add a home property to explicitly define the home page
     home: {
-      title: 'Welcome to SparkyFitness',
+      title: 'Welcome to Athleo',
       description: 'Your comprehensive fitness tracking solution.'
     },
   }

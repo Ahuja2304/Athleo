@@ -32,7 +32,7 @@ A clear and concise description of what actually happened.
 
 ## Environment
 
-- **SparkyFitness Version:** [e.g., 1.0.0, commit hash]
+- **Athleo Version:** [e.g., 1.0.0, commit hash]
 - **Running Env:** [e.g. Docker, Podmon, Directly running]
 
 
@@ -43,7 +43,7 @@ Please list any environment variables you have set that might be relevant to thi
 
 ```
 # Example:
-# SPARKY_FITNESS_LOG_LEVEL=DEBUG
+# ATHLEO_LOG_LEVEL=DEBUG
 # NODE_ENV=development
 # TZ=Etc/UTC
 ```
@@ -61,20 +61,20 @@ Make sure you are cleaning the log before re-producing the steps to minimize the
 # Paste console log here
 ```
 
-## Container Log for SparkyFitness
+## Container Log for Athleo
 
-Please provide the container logs for the `sparkyfitness` service. You can usually obtain these logs using `docker logs sparkyfitness` or by checking your container orchestration platform's logging interface.
-
-```
-# Paste SparkyFitness container log here
-```
-
-## Container Log for SparkyFitness_Server
-
-Please provide the container logs for the `sparkyfitness_server` service. You can usually obtain these logs using `docker logs sparkyfitness_server` or by checking your container orchestration platform's logging interface.
+Please provide the container logs for the `athleo` service. You can usually obtain these logs using `docker logs athleo` or by checking your container orchestration platform's logging interface.
 
 ```
-# Paste SparkyFitness_Server container log here
+# Paste Athleo container log here
+```
+
+## Container Log for Athleo_Server
+
+Please provide the container logs for the `athleo_server` service. You can usually obtain these logs using `docker logs athleo_server` or by checking your container orchestration platform's logging interface.
+
+```
+# Paste Athleo_Server container log here
 ```
 
 ## Screenshots/Videos (Optional)

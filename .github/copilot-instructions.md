@@ -1,11 +1,11 @@
-# SparkyFitness AI Coding Agent Instructions
+# Athleo AI Coding Agent Instructions
 
 ## Architecture Overview
 
 **Full-stack fitness tracking application** - self-hosted alternative to MyFitnessPal with AI-powered nutrition assistance.
 
 - **Frontend**: React 18 + TypeScript + Vite (`src/`)
-- **Backend**: Node.js/Express (`SparkyFitnessServer/`)
+- **Backend**: Node.js/Express (`AthleoServer/`)
 - **Database**: PostgreSQL with Row Level Security (RLS)
 - **UI**: Tailwind CSS + shadcn/ui components
 - **State**: React Context + TanStack Query
@@ -57,7 +57,7 @@ The `docker-helper.sh` script provides easy management:
 ## Critical Architecture Patterns
 
 ### Repository Pattern (Backend)
-All database operations use repository pattern in `SparkyFitnessServer/models/`:
+All database operations use repository pattern in `AthleoServer/models/`:
 ```javascript
 // Example: userRepository.js
 const pool = require('../db/connection');
@@ -78,7 +78,7 @@ async function createUser(userId, email, hashedPassword, full_name) {
 ```
 
 ### External Provider Integration
-Modular integration system in `SparkyFitnessServer/integrations/`:
+Modular integration system in `AthleoServer/integrations/`:
 - **Food providers**: OpenFoodFacts, Nutritionix, FatSecret
 - **Exercise data**: Wger integration
 - **Health data**: Apple Health integration
@@ -99,7 +99,7 @@ Key contexts in `src/contexts/`:
 
 ### Multi-Provider AI Support
 ```javascript
-// SparkyFitnessServer/ai/config.js
+// AthleoServer/ai/config.js
 function getDefaultModel(serviceType) {
   switch (serviceType) {
     case 'openai': return 'gpt-4o-mini';
@@ -170,9 +170,9 @@ try {
 - **Database**: Connection pooling, transaction management
 
 ## Key Files for Understanding
-- **Server entry**: `SparkyFitnessServer/SparkyFitnessServer.js` (route registration, middleware setup)
+- **Server entry**: `AthleoServer/AthleoServer.js` (route registration, middleware setup)
 - **Frontend entry**: `src/App.tsx` (context providers, query client setup)
-- **Documentation site**: `docs/` - Comprehensive Nuxt Content documentation (https://codewithcj.github.io/SparkyFitness)
+- **Documentation site**: `docs/` - Comprehensive Nuxt Content documentation (https://codewithcj.github.io/Athleo)
 
 ## Documentation Structure
 
@@ -187,7 +187,7 @@ The developer documentation has been consolidated into focused guides at `docs/c
 6. **`6.troubleshooting.md`** - Comprehensive debugging guide and common solutions
 
 ### Documentation Site Features
-- **Live site**: https://codewithcj.github.io/SparkyFitness hosted on GitHub Pages
+- **Live site**: https://codewithcj.github.io/Athleo hosted on GitHub Pages
 - **Technology**: Nuxt Content + Docus theme for optimal developer experience
 - **Navigation**: Auto-generated navigation with numerical ordering
 - **Search**: Full-text search across all documentation

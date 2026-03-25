@@ -56,4 +56,4 @@ jobs:
       - name: Push Helm chart to GHCR
         run: |
           OWNER_LC=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          helm push sparkyfitness-${{ steps.release_tag.outputs.chart_version }}.tgz oci://ghcr.io/${OWNER_LC}/charts
+          helm push athleo-${{ steps.release_tag.outputs.chart_version }}.tgz oci://ghcr.io/${OWNER_LC}/charts
